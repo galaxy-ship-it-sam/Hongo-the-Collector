@@ -1,0 +1,15 @@
+Hongo the Collector
+
+Copyright © 2026 Sami
+
+Ce projet peut être utilisé et modifié conformément à la licence
+présente dans le fichier LICENSE.
+
+Si vous réutilisez ce projet ou une partie importante de son code,
+merci de mentionner :
+
+"Hongo the Collector – créé par Sami"
+
+et d'indiquer le lien vers le dépôt GitHub original :
+
+https://github.com/galaxy-ship-it-sam/Hongo-the-Collector
