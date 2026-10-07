@@ -1,0 +1,23 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; font-family: Arial, sans-serif; background: #f3f5f8; color: #243447; display: grid; place-items: center; padding: 30px; }
+.app-shell { width: min(820px, 100%); background: white; border-radius: 20px; box-shadow: 0 16px 45px rgba(0,0,0,.10); overflow: hidden; }
+header { display: flex; gap: 16px; align-items: center; padding: 26px 30px 18px; }
+.logo { width: 54px; height: 54px; border-radius: 16px; display: grid; place-items: center; background: #243447; color: white; font-size: 25px; font-weight: bold; }
+h1 { margin: 0; font-size: 25px; } header p { margin: 5px 0 0; color: #7a8793; }
+.tabs { display: grid; grid-template-columns: repeat(4,1fr); border-top: 1px solid #e9edf1; border-bottom: 1px solid #e9edf1; }
+.tab { border: 0; background: white; padding: 16px 8px; cursor: pointer; font-weight: bold; color: #687684; }
+.tab.active { color: #111827; background: #f8fafc; box-shadow: inset 0 -3px #111827; }
+.panel { display: none; padding: 28px 30px 34px; } .panel.active { display: block; }
+h2 { margin-top: 0; font-size: 20px; }
+label { display: block; margin: 16px 0 7px; font-size: 14px; font-weight: bold; }
+input { width: 100%; padding: 13px 14px; border: 1px solid #cfd7df; border-radius: 10px; font-size: 15px; outline: none; }
+input:focus { border-color: #65788a; box-shadow: 0 0 0 3px rgba(101,120,138,.12); }
+.action { margin-top: 20px; border: 0; border-radius: 10px; padding: 13px 18px; color: white; font-weight: bold; cursor: pointer; }
+.success { background: #22a06b; } .primary { background: #2675c9; } .warning { background: #d9860b; } .danger { background: #d83a3a; }
+.results { margin-top: 20px; border: 1px solid #e1e6eb; border-radius: 10px; min-height: 100px; max-height: 220px; overflow: auto; padding: 12px; }
+.result { padding: 9px; border-bottom: 1px solid #eef1f4; word-break: break-all; font-size: 13px; } .result:last-child { border: 0; }
+.empty { color: #87929d; margin: 8px; }
+.danger-note { padding: 12px; border-radius: 10px; background: #fff1f1; color: #a52525; font-size: 14px; }
+.status { display: none; margin: 0 30px 28px; padding: 12px 14px; border-radius: 10px; }
+.status.show { display: block; } .status.ok { background: #e9f8f1; color: #146b49; } .status.error { background: #fff0f0; color: #a52525; }
+@media (max-width: 600px) { body { padding: 12px; } .tabs { grid-template-columns: repeat(2,1fr); } .panel { padding: 22px 18px; } header { padding: 22px 18px; } }

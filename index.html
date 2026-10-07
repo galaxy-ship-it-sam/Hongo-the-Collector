@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hongo the Collector</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="app-shell">
+    <header>
+      <div class="logo">H</div>
+      <div><h1>Hongo the Collector</h1><p>Gestionnaire de fichiers et dossiers</p></div>
+    </header>
+
+    <nav class="tabs">
+      <button class="tab active" data-tab="create">Créer</button>
+      <button class="tab" data-tab="move">Déplacer</button>
+      <button class="tab" data-tab="search">Rechercher</button>
+      <button class="tab" data-tab="delete">Supprimer</button>
+    </nav>
+
+    <section id="create" class="panel active">
+      <h2>Créer un dossier</h2>
+      <label>Dossier parent</label>
+      <input id="create-parent" placeholder="Ex. C:\\Users\\Sami\\Documents">
+      <label>Nom du nouveau dossier</label>
+      <input id="create-name" placeholder="Ex. MonProjet">
+      <button class="action success" id="create-btn">Créer le dossier</button>
+    </section>
+
+    <section id="move" class="panel">
+      <h2>Déplacer un élément</h2>
+      <label>Fichier ou dossier source</label>
+      <input id="move-source" placeholder="Chemin complet de l'élément">
+      <label>Dossier de destination</label>
+      <input id="move-destination" placeholder="Chemin du dossier de destination">
+      <button class="action primary" id="move-btn">Déplacer l'élément</button>
+    </section>
+
+    <section id="search" class="panel">
+      <h2>Rechercher un fichier</h2>
+      <label>Dossier de recherche</label>
+      <input id="search-directory" placeholder="Chemin du dossier">
+      <label>Nom du fichier ou mot-clé</label>
+      <input id="search-keyword" placeholder="Ex. rapport, .pdf, image">
+      <button class="action warning" id="search-btn">Lancer la recherche</button>
+      <div id="results" class="results"><p class="empty">Les résultats apparaîtront ici.</p></div>
+    </section>
+
+    <section id="delete" class="panel">
+      <h2>Supprimer un élément</h2>
+      <div class="danger-note">Attention : cette action supprime définitivement le fichier ou le dossier.</div>
+      <label>Chemin de l'élément</label>
+      <input id="delete-target" placeholder="Chemin complet du fichier ou dossier">
+      <button class="action danger" id="delete-btn">Supprimer définitivement</button>
+    </section>
+
+    <div id="status" class="status" aria-live="polite"></div>
+  </main>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
