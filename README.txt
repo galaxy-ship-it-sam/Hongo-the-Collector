@@ -8,7 +8,7 @@ HONGO THE COLLECTOR - VERSION WEB
 4. Ouvre dans ton navigateur :
    http://127.0.0.1:5000
 
-si sa marche pas tape c'est comande dans cmd
+si ca ne marche pas tape ces commandes dans cmd
 
 1. Installe Flask :
 py -m pip install flask
