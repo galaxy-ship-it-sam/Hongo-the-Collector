@@ -8,6 +8,15 @@ HONGO THE COLLECTOR - VERSION WEB
 4. Ouvre dans ton navigateur :
    http://127.0.0.1:5000
 
+si sa marche pas tape c'est comande dans cmd
+
+1. Installe Flask :
+py -m pip install flask
+2. Lance le programme :
+py app.py
+Ouvre dans ton navigateur :
+   http://127.0.0.1:5000
+
 Le programme garde les fonctions du projet original :
 - créer un dossier
 - déplacer un fichier ou dossier
